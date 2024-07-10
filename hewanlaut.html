@@ -1,0 +1,2527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hewan Laut</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            overflow-x: hidden;
+        }
+
+        .biru-gitu {
+            background-color: #374993;
+        }
+
+        .warna-text {
+            color: #333132;
+        }
+
+        .text-hover {
+            color: #374993;
+        }
+
+        .shadow-color {
+            box-shadow: #37499371;
+        }
+
+
+
+        .section-center {
+            position: relative;
+            /* position: absolute; */
+            width: 587px;
+            height: 420px;
+            display: block;
+            margin: 0 auto;
+            /* overflow: hidden; */
+        }
+
+        .section-up {
+            position: absolute;
+            width: 100%;
+            height: 270px;
+            left: 0;
+            top: 0;
+            display: block;
+            z-index: 5;
+        }
+
+        .hill {
+            position: absolute;
+            width: 115px;
+            height: 27px;
+            left: 30px;
+            bottom: 0;
+            display: block;
+            z-index: 15;
+        }
+
+        .hill.snd {
+            left: 115px;
+            z-index: 14;
+        }
+
+        .hill.trd {
+            transform: rotateY(180deg);
+            left: auto;
+            right: 30px;
+        }
+
+        .hill.frt {
+            transform: rotateY(180deg);
+            left: auto;
+            right: 110px;
+            z-index: 14;
+        }
+
+        .hill span {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            left: 4px;
+            top: 0;
+            display: block;
+            border-radius: 50%;
+            border: 2px solid #030308;
+            border-color: #030308 transparent transparent transparent;
+        }
+
+        .hill span:nth-child(2) {
+            width: 110px;
+            height: 110px;
+            left: -6px;
+            top: -5px;
+            background-color: transparent;
+            transform: rotate(5deg);
+            border-color: transparent transparent transparent #030308;
+        }
+
+        .hill span:nth-child(3) {
+            width: 10px;
+            height: 10px;
+            left: 2px;
+            top: 22px;
+            transform: rotate(-55deg);
+            border: none;
+            border-radius: 0;
+        }
+
+        .hill span:nth-child(4) {
+            width: 40px;
+            height: 40px;
+            left: auto;
+            top: 11px;
+            right: 5px;
+            border-color: #030308 transparent transparent transparent;
+        }
+
+        .hill span:nth-child(5) {
+            width: 110px;
+            height: 110px;
+            left: auto;
+            top: 3px;
+            right: -8px;
+            background-color: transparent;
+            transform: rotate(85deg);
+            border-color: #030308 transparent transparent transparent;
+        }
+
+        .hill span:nth-child(6) {
+            width: 24px;
+            height: 24px;
+            left: auto;
+            top: -5px;
+            right: 31px;
+            background-color: transparent;
+            border-color: transparent transparent #030308 transparent;
+        }
+
+        .hill span:nth-child(7) {
+            width: 17px;
+            height: 4px;
+            left: auto;
+            top: 10px;
+            right: 49px;
+            background-color: transparent;
+            border-radius: 0;
+            transform: rotate(33deg);
+            border-color: #030308 transparent transparent transparent;
+        }
+
+        .hill span:nth-child(8) {
+            width: 20px;
+            height: 10px;
+            left: 65px;
+            top: 21px;
+            transform: rotate(-35deg);
+            border: none;
+            border-radius: 0;
+        }
+
+        .hill span:nth-child(9) {
+            width: 30px;
+            height: 10px;
+            left: 46px;
+            top: 15px;
+            transform: rotate(33deg);
+            border: none;
+            border-radius: 0;
+        }
+
+        .hill span:nth-child(10) {
+            width: 20px;
+            height: 10px;
+            left: 60px;
+            top: 19px;
+            border: none;
+            border-radius: 0;
+        }
+
+        .hill span:nth-child(11) {
+            width: 20px;
+            height: 10px;
+            left: 101px;
+            top: 29px;
+            border: none;
+            border-radius: 0;
+            transform: rotate(45deg);
+        }
+
+        .left-tree {
+            position: absolute;
+            width: 20px;
+            height: 33px;
+            left: 33px;
+            bottom: 8px;
+            display: block;
+            z-index: 10;
+            transform: rotate(11deg) skewX(3deg);
+            transform-origin: center bottom;
+            animation: moveTree 1.6s ease infinite;
+        }
+
+        @keyframes moveTree {
+
+            0%,
+            100% {
+                transform: rotate(11deg) skewX(3deg);
+            }
+
+            50% {
+                transform: rotate(-11deg) skewX(-3deg);
+            }
+
+            100% {
+                transform: rotate(11deg) skewX(3deg);
+            }
+        }
+
+        .left-tree span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            border: 2px solid #030308;
+            background-color: #fff;
+        }
+
+        .left-tree span:nth-child(2) {
+            width: 2px;
+            height: 25px;
+            left: 9px;
+            top: auto;
+            bottom: 0;
+            border-radius: 0;
+            border: none;
+            background-color: #030308;
+        }
+
+        .left-tree span:nth-child(3) {
+            width: 2px;
+            height: 5px;
+            left: 7px;
+            top: auto;
+            bottom: 20px;
+            border-radius: 0;
+            border: none;
+            background-color: #030308;
+            transform: rotate(-45deg);
+        }
+
+        .left-tree span:nth-child(4) {
+            width: 2px;
+            height: 5px;
+            left: 11px;
+            top: auto;
+            bottom: 17px;
+            border-radius: 0;
+            border: none;
+            background-color: #030308;
+            transform: rotate(45deg);
+        }
+
+        .right-tree {
+            position: absolute;
+            width: 20px;
+            height: 33px;
+            right: 25px;
+            bottom: 3px;
+            display: block;
+            z-index: 10;
+            transform: rotate(11deg) skewX(3deg);
+            transform-origin: center bottom;
+            animation: moveTree 1.6s ease infinite;
+        }
+
+        .right-tree span {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            left: 1px;
+            top: 2px;
+            border-radius: 50%;
+            border: 2px solid #030308;
+            background-color: #fff;
+        }
+
+        .right-tree span:nth-child(2) {
+            width: 2px;
+            height: 25px;
+            left: 9px;
+            top: auto;
+            bottom: 0;
+            border-radius: 0;
+            border: none;
+            background-color: #030308;
+        }
+
+        .right-tree span:nth-child(3) {
+            width: 2px;
+            height: 5px;
+            left: 7px;
+            top: auto;
+            bottom: 20px;
+            border-radius: 0;
+            border: none;
+            background-color: #030308;
+            transform: rotate(-45deg);
+        }
+
+        .right-tree span:nth-child(4) {
+            width: 2px;
+            height: 5px;
+            left: 11px;
+            top: auto;
+            bottom: 17px;
+            border-radius: 0;
+            border: none;
+            background-color: #030308;
+            transform: rotate(45deg);
+        }
+
+        .right-tree span:nth-child(5) {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            left: 3px;
+            top: -6px;
+            border-radius: 50%;
+            border: 2px solid #030308;
+            background-color: #fff;
+            border-bottom-color: transparent;
+        }
+
+        .building-left {
+            position: absolute;
+            left: 62px;
+            bottom: 3px;
+            display: block;
+            z-index: 9;
+        }
+
+        .building-left span {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border: 2px solid #030308;
+            background-color: #fff;
+            width: 17px;
+            height: 42px;
+        }
+
+        .building-left span:nth-child(2) {
+            left: 20px;
+            width: 30px;
+            height: 64px;
+        }
+
+        .building-left span:nth-child(3) {
+            left: 23px;
+            bottom: 62px;
+            width: 24px;
+            height: 9px;
+        }
+
+        .building-left span:nth-child(4) {
+            left: 54px;
+            width: 20px;
+            height: 46px;
+        }
+
+        .building-left span:nth-child(5) {
+            left: 56px;
+            bottom: 44px;
+            width: 16px;
+            height: 7px;
+        }
+
+        .building-left span:nth-child(6) {
+            left: 2px;
+            bottom: 27px;
+            border: none;
+            background-color: #030308;
+            width: 6px;
+            height: 2px;
+        }
+
+        .building-left span:nth-child(7) {
+            left: 22px;
+            bottom: 44px;
+            border: none;
+            background-color: #030308;
+            width: 11px;
+            height: 2px;
+        }
+
+        .building-left span:nth-child(8) {
+            left: 39px;
+            bottom: 20px;
+            border: none;
+            background-color: #030308;
+            width: 11px;
+            height: 2px;
+        }
+
+        .building-left span:nth-child(9) {
+            left: 56px;
+            bottom: 31px;
+            border: none;
+            background-color: #030308;
+            width: 8px;
+            height: 2px;
+        }
+
+        .building-left span:nth-child(10) {
+            left: 29px;
+            bottom: 71px;
+            border: none;
+            background-color: #030308;
+            width: 2px;
+            height: 17px;
+        }
+
+        .building-left span:nth-child(11) {
+            left: 39px;
+            bottom: 71px;
+            border: none;
+            background-color: #030308;
+            width: 2px;
+            height: 17px;
+        }
+
+        .building-right {
+            position: absolute;
+            right: 67px;
+            bottom: 0;
+            display: block;
+            z-index: 8;
+        }
+
+        .building-right span {
+            position: absolute;
+            right: 18px;
+            bottom: 0;
+            border: 2px solid #030308;
+            background-color: #fff;
+            width: 86px;
+            height: 24px;
+        }
+
+        .building-right span:nth-child(2) {
+            right: 18px;
+            bottom: 22px;
+            width: 96px;
+            height: 22px;
+            transform-origin: center bottom;
+            transform: skewX(-20deg);
+        }
+
+        .building-right span:nth-child(3) {
+            right: 0;
+            bottom: 0;
+            width: 22px;
+            height: 52px;
+        }
+
+        .building-right span:nth-child(4) {
+            right: 2px;
+            bottom: 42px;
+            background-color: #030308;
+            border: none;
+            width: 7px;
+            height: 2px;
+        }
+
+        .building-right span:nth-child(5) {
+            right: 13px;
+            bottom: 32px;
+            background-color: #030308;
+            border: none;
+            width: 7px;
+            height: 2px;
+        }
+
+        .building-right span:nth-child(6) {
+            right: 10px;
+            bottom: 52px;
+            background-color: #030308;
+            border: none;
+            width: 2px;
+            height: 32px;
+        }
+
+        .building-right span:nth-child(7) {
+            right: -4px;
+            bottom: 74px;
+            border: none;
+            background-color: transparent;
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid #030308;
+            border-left: 0 solid transparent;
+            border-right: 15px solid transparent;
+            transform: skewY(-15deg);
+            transform-origin: left center;
+            animation: moveFlag 1.5s ease infinite;
+        }
+
+        .building-right span:nth-child(8) {
+            right: 2px;
+            bottom: 76px;
+            border: none;
+            background-color: transparent;
+            width: 0;
+            height: 0;
+            border-bottom: 5px solid #fff;
+            border-left: 0 solid transparent;
+            border-right: 8px solid transparent;
+            transform: skewY(-15deg);
+            transform-origin: left center;
+            animation: moveFlag 1.5s ease infinite;
+        }
+
+        @keyframes moveFlag {
+            0% {
+                transform: skewY(-15deg);
+            }
+
+            50% {
+                transform: skewY(5deg);
+            }
+
+            100% {
+                transform: skewY(-15deg);
+            }
+        }
+
+        .building-right span:nth-child(9) {
+            right: 31px;
+            bottom: 0;
+            width: 33px;
+            height: 65px;
+            perspective: 70px;
+            background-color: transparent;
+            border: none;
+        }
+
+        .building-right span:nth-child(9) span {
+            right: 0;
+            bottom: 0;
+            width: 33px;
+            height: 65px;
+            transform-origin: bottom center;
+            transform: rotateX(13deg);
+        }
+
+        .building-right span:nth-child(10) {
+            right: 31px;
+            bottom: 55px;
+            width: 33px;
+            height: 10px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .building-right span:nth-child(11) {
+            right: 36px;
+            bottom: 63px;
+            width: 23px;
+            height: 30px;
+            border-top-left-radius: 11px;
+            border-top-right-radius: 11px;
+        }
+
+        .building-right span:nth-child(12) {
+            right: 42px;
+            bottom: 91px;
+            width: 11px;
+            height: 7px;
+        }
+
+        .building-right span:nth-child(13) {
+            right: 46px;
+            bottom: 98px;
+            width: 3px;
+            border: none;
+            background-color: #030308;
+            height: 18px;
+        }
+
+        .building-right span:nth-child(14) {
+            right: 43px;
+            bottom: 17px;
+            width: 9px;
+            height: 11px;
+        }
+
+        .building-right span:nth-child(15) {
+            right: 43px;
+            bottom: 35px;
+            width: 9px;
+            height: 11px;
+        }
+
+        .building-right span:nth-child(16) {
+            right: 43px;
+            bottom: 63px;
+            width: 9px;
+            height: 13px;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+        }
+
+        .bird-wrapper {
+            position: absolute;
+            left: 166px;
+            bottom: 46px;
+            display: block;
+            z-index: 8;
+            animation: birdFly 3.5s ease infinite;
+            animation-delay: 0.4s;
+        }
+
+        .bird-wrapper.snd {
+            left: 340px;
+            bottom: 65px;
+            animation-delay: 0s;
+        }
+
+        .bird-wrapper.trd {
+            left: 420px;
+            bottom: 132px;
+            animation-delay: 1s;
+        }
+
+        @keyframes birdFly {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-40px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .left-wing {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 14px;
+            height: 14px;
+            transform-origin: right bottom;
+            animation: wingLeft 0.4s ease infinite;
+        }
+
+        .left-wing span {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border: 2px solid #030308;
+            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            border-color: #030308 transparent transparent transparent;
+            transform: translate(4px, 12px);
+        }
+
+        @keyframes wingLeft {
+            0% {
+                transform: rotate(0);
+            }
+
+            50% {
+                transform: rotate(40deg);
+            }
+
+            100% {
+                transform: rotate(0);
+            }
+        }
+
+        .right-wing {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 14px;
+            height: 14px;
+            transform-origin: left bottom;
+            animation: wingRight 0.4s ease infinite;
+        }
+
+        .right-wing span {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border: 2px solid #030308;
+            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            border-color: #030308 transparent transparent transparent;
+            transform: translate(-4px, 12px);
+        }
+
+        @keyframes wingRight {
+            0% {
+                transform: rotate(0);
+            }
+
+            50% {
+                transform: rotate(-40deg);
+            }
+
+            100% {
+                transform: rotate(0);
+            }
+        }
+
+        .sun {
+            position: absolute;
+            left: 200px;
+            top: 50px;
+            z-index: 4;
+        }
+
+        .sun span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            border: 2px solid #030308;
+            background-color: #fff;
+            width: 37px;
+            height: 37px;
+            animation: sunShine 3.5s linear infinite;
+        }
+
+        @keyframes sunShine {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.14);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .cloud-left {
+            position: absolute;
+            left: 124px;
+            top: 113px;
+            z-index: 4;
+            width: 30px;
+            height: 20px;
+            animation: cloudMove 1.7s linear infinite;
+        }
+
+        .cloud-left span {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid #030308;
+            border-color: #030308 #030308 #030308 transparent;
+        }
+
+        .cloud-left span:nth-child(2) {
+            right: auto;
+            left: 0;
+            top: 3px;
+            width: 14px;
+            height: 17px;
+            border-radius: 0;
+            border: none;
+            border-top: 2px solid #030308;
+            border-bottom: 2px solid #030308;
+            border-left: 2px solid #030308;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .cloud-left span:nth-child(3) {
+            right: 12px;
+            top: auto;
+            bottom: 0;
+            width: 10px;
+            height: 8px;
+            border-radius: 0;
+            border: none;
+            border-bottom: 2px solid #030308;
+        }
+
+        @keyframes cloudMove {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(10px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .cloud-middle {
+            position: absolute;
+            left: 285px;
+            top: 117px;
+            z-index: 4;
+            width: 40px;
+            height: 28px;
+            animation: cloudMove 1.7s linear infinite;
+            animation-delay: 0.4s;
+        }
+
+        .cloud-middle span {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid #030308;
+            border-color: #030308 #030308 #030308 transparent;
+        }
+
+        .cloud-middle span:nth-child(2) {
+            right: auto;
+            left: 0;
+            top: 4px;
+            width: 17px;
+            height: 24px;
+            border-radius: 0;
+            border: none;
+            border-top: 2px solid #030308;
+            border-bottom: 2px solid #030308;
+            border-left: 2px solid #030308;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+
+        .cloud-middle span:nth-child(3) {
+            right: 14px;
+            top: auto;
+            bottom: 0;
+            width: 10px;
+            height: 8px;
+            border-radius: 0;
+            border: none;
+            border-bottom: 2px solid #030308;
+        }
+
+        .cloud-right {
+            position: absolute;
+            right: 64px;
+            top: 73px;
+            z-index: 4;
+            width: 23px;
+            height: 16px;
+            animation: cloudMove 1.7s linear infinite;
+            animation-delay: 0.6s;
+        }
+
+        .cloud-right span {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid #030308;
+            border-color: #030308 #030308 #030308 transparent;
+        }
+
+        .cloud-right span:nth-child(2) {
+            right: auto;
+            left: 0;
+            top: 3px;
+            width: 10px;
+            height: 13px;
+            border-radius: 0;
+            border: none;
+            border-top: 2px solid #030308;
+            border-bottom: 2px solid #030308;
+            border-left: 2px solid #030308;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+
+        .cloud-right span:nth-child(3) {
+            right: 7px;
+            top: auto;
+            bottom: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 0;
+            border: none;
+            border-bottom: 2px solid #030308;
+        }
+
+        .section-down {
+            position: absolute;
+            width: 100%;
+            height: 180px;
+            left: 0;
+            top: 270px;
+            display: block;
+            z-index: 6;
+            border-top: 2px solid #030308;
+            background-color: #067BBB;
+        }
+
+        .water-wrapper {
+            position: absolute;
+            left: 65px;
+            bottom: 0;
+            height: 70px;
+            width: 77px;
+            display: block;
+            z-index: 6;
+            overflow: hidden;
+        }
+
+        .water-wrapper.right {
+            left: 450px;
+            bottom: -20px;
+        }
+
+        .water-wrapper.top.right {
+            left: 454.5px;
+            bottom: -10px;
+        }
+
+        .water-wrap {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 70px;
+            width: 231px;
+            display: block;
+            z-index: 6;
+            transform: translateX(0);
+            animation: moveWater 1.6s linear infinite;
+        }
+
+        @keyframes moveWater {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-33.333333333333%);
+            }
+        }
+
+        .water {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 70px;
+            width: 77px;
+            display: block;
+            z-index: 6;
+            background-color: #067BBB;
+        }
+
+        .water.snd {
+            left: 77px;
+        }
+
+        .water.trd {
+            left: 154px;
+        }
+
+        .water span {
+            position: absolute;
+            left: -4px;
+            top: 12px;
+            height: 20px;
+            width: 20px;
+            display: block;
+            z-index: 6;
+            border-radius: 50%;
+            border: 2px solid #030308;
+            border-color: #030308 transparent transparent transparent;
+        }
+
+        .water span:nth-child(2) {
+            left: 9px;
+            top: -1px;
+            border-color: transparent transparent #030308 transparent;
+        }
+
+        .water span:nth-child(3) {
+            left: 22px;
+        }
+
+        .water span:nth-child(4) {
+            left: 35px;
+            top: -1px;
+            border-color: transparent transparent #030308 transparent;
+        }
+
+        .water span:nth-child(5) {
+            left: 48px;
+        }
+
+        .water span:nth-child(6) {
+            left: 61px;
+            top: -1px;
+            border-color: transparent transparent #030308 transparent;
+        }
+
+        .water-wrapper.top {
+            width: 68px;
+            left: 69.5px;
+            bottom: 10px;
+            z-index: 7;
+        }
+
+        .water-wrapper.top .water-wrap {
+            width: 204px;
+        }
+
+        .water-wrapper.top .water {
+            height: 70px;
+            width: 68px;
+            background-color: transparent;
+        }
+
+        .water-wrapper.top .water.snd {
+            left: 68px;
+        }
+
+        .water-wrapper.top .water.trd {
+            left: 136px;
+        }
+
+        .water-wrapper.top .water span {
+            position: absolute;
+            left: -3px;
+            top: 12px;
+            height: 18px;
+            width: 18px;
+            display: block;
+            z-index: 6;
+            border-radius: 50%;
+            border: 2px solid #030308;
+            border-color: #030308 transparent transparent transparent;
+        }
+
+        .water-wrapper.top .water span:nth-child(2) {
+            left: 8px;
+            top: 0;
+            border-color: transparent transparent #030308 transparent;
+        }
+
+        .water-wrapper.top .water span:nth-child(3) {
+            left: 19px;
+        }
+
+        .water-wrapper.top .water span:nth-child(4) {
+            left: 30px;
+            top: 0;
+            border-color: transparent transparent #030308 transparent;
+        }
+
+        .water-wrapper.top .water span:nth-child(5) {
+            left: 41px;
+        }
+
+        .water-wrapper.top .water span:nth-child(6) {
+            left: 53px;
+            top: 0;
+            border-color: transparent transparent #030308 transparent;
+        }
+
+        .fish-wrapper {
+            position: absolute;
+            left: 82px;
+            bottom: 85px;
+            height: 20px;
+            width: 54px;
+            display: block;
+            z-index: 4;
+        }
+
+        .fish-wrapper.right {
+            left: 467px;
+            bottom: 70px;
+        }
+
+        .fish-wrapper.right .fish-wrap {
+            transform: translate(-35px, 60px) rotate(-90deg);
+            animation: moveFish-higher 3.5s linear infinite;
+            animation-delay: 1s;
+        }
+
+        .fish-wrap {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 20px;
+            width: 54px;
+            display: block;
+            z-index: 4;
+            transform-origin: center center;
+            transform: translate(-35px, 60px) rotate(-90deg);
+            animation: moveFish 3.5s linear infinite;
+        }
+
+        @keyframes moveFish {
+            0% {
+                transform: translate(-35px, 60px) rotate(-90deg);
+            }
+
+            5% {
+                transform: translate(20px, 60px) rotate(90deg);
+            }
+
+            45% {
+                transform: translate(20px, 60px) rotate(90deg);
+            }
+
+            50% {
+                transform: translate(10px, 10px) rotate(35deg);
+            }
+
+            58% {
+                transform: translate(0, 0) rotate(0);
+            }
+
+            67% {
+                transform: translate(0, 0) rotate(0);
+            }
+
+            75% {
+                transform: translate(-20px, 10px) rotate(-65deg);
+            }
+
+            80% {
+                transform: translate(-35px, 60px) rotate(-90deg);
+            }
+
+            100% {
+                transform: translate(-35px, 60px) rotate(-90deg);
+            }
+        }
+
+        @keyframes moveFish-higher {
+            0% {
+                transform: translate(-35px, 60px) rotate(-90deg);
+            }
+
+            5% {
+                transform: translate(20px, 60px) rotate(90deg);
+            }
+
+            45% {
+                transform: translate(20px, 60px) rotate(90deg);
+            }
+
+            50% {
+                transform: translate(10px, 10px) rotate(35deg);
+            }
+
+            58% {
+                transform: translate(0, -7px) rotate(0);
+            }
+
+            67% {
+                transform: translate(0, -7px) rotate(0);
+            }
+
+            75% {
+                transform: translate(-20px, 10px) rotate(-65deg);
+            }
+
+            80% {
+                transform: translate(-35px, 60px) rotate(-90deg);
+            }
+
+            100% {
+                transform: translate(-35px, 60px) rotate(-90deg);
+            }
+        }
+
+        .fish {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 20px;
+            width: 54px;
+            display: block;
+            z-index: 4;
+            transform: scale(1, 0.45);
+        }
+
+        .fish span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 36px;
+            width: 36px;
+            background-color: #fff;
+            border: 4px solid #030308;
+            border-top-left-radius: 60%;
+            border-bottom-right-radius: 60%;
+            border-bottom-left-radius: 53%;
+            transform: rotate(45deg);
+        }
+
+        .fish span:nth-child(2) {
+            position: absolute;
+            left: 39px;
+            top: 16px;
+            height: 4px;
+            width: 13px;
+            background-color: #030308;
+            border: none;
+            border-radius: 0;
+            transform-origin: left center;
+            transform: rotate(45deg);
+            animation: fishTail-bottom 3.5s linear infinite;
+        }
+
+        .fish-wrapper.right .fish span:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        @keyframes fishTail-bottom {
+            0% {
+                transform: rotate(45deg);
+                left: 39px;
+                top: 16px;
+            }
+
+            59% {
+                transform: rotate(45deg);
+                left: 39px;
+                top: 16px;
+            }
+
+            60% {
+                transform: rotate(25deg);
+                left: 37px;
+                top: 15px;
+            }
+
+            61% {
+                transform: rotate(25deg);
+                left: 37px;
+                top: 15px;
+            }
+
+            62% {
+                transform: rotate(45deg);
+                left: 39px;
+                top: 16px;
+            }
+
+            64% {
+                transform: rotate(45deg);
+                left: 39px;
+                top: 16px;
+            }
+
+            65% {
+                transform: rotate(25deg);
+                left: 37px;
+                top: 15px;
+            }
+
+            66% {
+                transform: rotate(25deg);
+                left: 37px;
+                top: 15px;
+            }
+
+            67% {
+                transform: rotate(45deg);
+                left: 39px;
+                top: 16px;
+            }
+
+            100% {
+                transform: rotate(45deg);
+                left: 39px;
+                top: 16px;
+            }
+        }
+
+        .fish span:nth-child(3) {
+            position: absolute;
+            left: 39px;
+            top: 16px;
+            height: 4px;
+            width: 13px;
+            background-color: #030308;
+            border: none;
+            border-radius: 0;
+            transform-origin: left center;
+            transform: rotate(-45deg);
+            animation: fishTail-top 3.5s linear infinite;
+        }
+
+        .fish-wrapper.right .fish span:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes fishTail-top {
+            0% {
+                transform: rotate(-45deg);
+                left: 39px;
+                top: 16px;
+            }
+
+            59% {
+                transform: rotate(-45deg);
+                left: 39px;
+                top: 16px;
+            }
+
+            60% {
+                transform: rotate(-25deg);
+                left: 37px;
+                top: 17px;
+            }
+
+            61% {
+                transform: rotate(-25deg);
+                left: 37px;
+                top: 17px;
+            }
+
+            62% {
+                transform: rotate(-45deg);
+                left: 39px;
+                top: 16px;
+            }
+
+            64% {
+                transform: rotate(-45deg);
+                left: 39px;
+                top: 16px;
+            }
+
+            65% {
+                transform: rotate(-25deg);
+                left: 37px;
+                top: 17px;
+            }
+
+            66% {
+                transform: rotate(-25deg);
+                left: 37px;
+                top: 17px;
+            }
+
+            67% {
+                transform: rotate(-45deg);
+                left: 39px;
+                top: 16px;
+            }
+
+            100% {
+                transform: rotate(-45deg);
+                left: 39px;
+                top: 16px;
+            }
+        }
+
+        .fish span:nth-child(4) {
+            position: absolute;
+            left: 9px;
+            top: 14px;
+            height: 7px;
+            width: 4px;
+            background-color: #030308;
+            border: none;
+            border-radius: 50%;
+            transform-origin: center center;
+            transform: rotate(0);
+            animation: fishEye 3.5s linear infinite;
+        }
+
+        .fish-wrapper.right .fish span:nth-child(4) {
+            animation-delay: 1s;
+        }
+
+        @keyframes fishEye {
+            0% {
+                height: 7px;
+                top: 14px;
+            }
+
+            59% {
+                height: 7px;
+                top: 14px;
+            }
+
+            60% {
+                height: 0;
+                top: 17px;
+            }
+
+            61% {
+                height: 7px;
+                top: 14px;
+            }
+
+            64% {
+                height: 7px;
+                top: 14px;
+            }
+
+            65% {
+                height: 0;
+                top: 17px;
+            }
+
+            66% {
+                height: 7px;
+                top: 14px;
+            }
+
+            100% {
+                height: 7px;
+                top: 14px;
+            }
+        }
+
+        .water-lines-wrapper {
+            position: absolute;
+            top: 18px;
+            left: 33px;
+            z-index: 2;
+        }
+
+        .water-lines-wrapper.right {
+            left: 500px;
+            top: 24px;
+        }
+
+        .water-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .water-lines span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 2px;
+            background-color: #030308;
+            animation: water-lines-1 3.5s ease infinite;
+        }
+
+        @keyframes water-lines-1 {
+            0% {
+                transform: translateX(0) scaleX(1);
+            }
+
+            50% {
+                transform: translateX(21px) scaleX(0.75);
+            }
+
+            100% {
+                transform: translateX(0) scaleX(1);
+            }
+        }
+
+        .water-lines span:nth-child(2) {
+            left: 49px;
+            width: 17px;
+            animation-name: water-lines-2;
+        }
+
+        @keyframes water-lines-2 {
+            0% {
+                transform: translateX(0) scaleX(1);
+            }
+
+            50% {
+                transform: translateX(15px) scaleX(1.29);
+            }
+
+            100% {
+                transform: translateX(0) scaleX(1);
+            }
+        }
+
+        .water-lines span:nth-child(3) {
+            top: 12px;
+            left: 14px;
+            width: 14px;
+            animation-name: water-lines-3;
+            animation-delay: 0.1s;
+        }
+
+        @keyframes water-lines-3 {
+            0% {
+                transform: translateX(0) scaleX(1);
+            }
+
+            50% {
+                transform: translateX(8px) scaleX(1.21);
+            }
+
+            100% {
+                transform: translateX(0) scaleX(1);
+            }
+        }
+
+        .water-lines span:nth-child(4) {
+            top: 12px;
+            left: 47px;
+            width: 11px;
+            animation-name: water-lines-4;
+            animation-delay: 0.1s;
+        }
+
+        @keyframes water-lines-4 {
+            0% {
+                transform: translateX(0) scaleX(1);
+            }
+
+            50% {
+                transform: translateX(11px) scaleX(1.18);
+            }
+
+            100% {
+                transform: translateX(0) scaleX(1);
+            }
+        }
+
+        .water-lines span:nth-child(5) {
+            top: 24px;
+            left: 32px;
+            width: 10px;
+            animation-name: water-lines-5;
+            animation-delay: 0.2s;
+        }
+
+        @keyframes water-lines-5 {
+            0% {
+                transform: translateX(0) scaleX(1);
+            }
+
+            50% {
+                transform: translateX(7px) scaleX(1.2);
+            }
+
+            100% {
+                transform: translateX(0) scaleX(1);
+            }
+        }
+
+        .water-big-wrapper {
+            position: absolute;
+            left: 240px;
+            bottom: 0;
+            height: 140px;
+            width: 114px;
+            display: block;
+            z-index: 6;
+            overflow: hidden;
+        }
+
+        .water-big-wrap {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 114px;
+            width: 348px;
+            display: block;
+            z-index: 6;
+            animation: moveWater 2s linear infinite;
+        }
+
+        .water-big {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 140px;
+            width: 116px;
+            display: block;
+            z-index: 1;
+        }
+
+        .water-big.snd {
+            left: 116px;
+        }
+
+        .water-big.trd {
+            left: 232px;
+        }
+
+        .water-big span {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            height: 50px;
+            width: 116px;
+            display: block;
+            z-index: 1;
+            background-color: #067BBB;
+        }
+
+        .water-big span:nth-child(2) {
+            left: -2px;
+            top: -20px;
+            height: 40px;
+            width: 40px;
+            z-index: 2;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 2px solid #030308;
+            border-color: transparent #030308 #030308 transparent;
+            transform: rotate(45deg);
+        }
+
+        .water-big span:nth-child(3) {
+            left: 37px;
+            top: -20px;
+            height: 40px;
+            width: 40px;
+            z-index: 2;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 2px solid #030308;
+            border-color: transparent #030308 #030308 transparent;
+            transform: rotate(45deg);
+        }
+
+        .water-big span:nth-child(4) {
+            left: 75px;
+            top: -20px;
+            height: 40px;
+            width: 40px;
+            z-index: 2;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 2px solid #030308;
+            border-color: transparent #030308 #030308 transparent;
+            transform: rotate(45deg);
+        }
+
+        .water-big span:nth-child(5) {
+            left: 8px;
+            top: 14px;
+            height: 60px;
+            width: 60px;
+            border-top-left-radius: 60%;
+            border-bottom-right-radius: 60%;
+            border-bottom-left-radius: 53%;
+            transform: scale(0.45, 1) rotate(-45deg);
+        }
+
+        .water-big span:nth-child(6) {
+            left: 46px;
+            top: 14px;
+            height: 60px;
+            width: 60px;
+            border-top-left-radius: 60%;
+            border-bottom-right-radius: 60%;
+            border-bottom-left-radius: 53%;
+            transform: scale(0.45, 1) rotate(-45deg);
+        }
+
+        .water-big span:nth-child(7) {
+            left: 84px;
+            top: 14px;
+            height: 60px;
+            width: 60px;
+            border-top-left-radius: 60%;
+            border-bottom-right-radius: 60%;
+            border-bottom-left-radius: 53%;
+            transform: scale(0.45, 1) rotate(-45deg);
+        }
+
+        .water-big span:nth-child(8) {
+            left: -30px;
+            top: 14px;
+            height: 60px;
+            width: 60px;
+            border-top-left-radius: 60%;
+            border-bottom-right-radius: 60%;
+            border-bottom-left-radius: 53%;
+            transform: scale(0.45, 1) rotate(-45deg);
+        }
+
+        .water-big span:nth-child(9) {
+            left: 5px;
+            top: 15px;
+            height: 15px;
+            width: 10px;
+            transform: rotate(-55deg);
+        }
+
+        .water-big span:nth-child(10) {
+            left: 43px;
+            top: 14px;
+            height: 15px;
+            width: 10px;
+            transform: rotate(-55deg);
+        }
+
+        .water-big span:nth-child(11) {
+            left: 81px;
+            top: 14px;
+            height: 15px;
+            width: 10px;
+            transform: rotate(-55deg);
+        }
+
+        .water-big span:nth-child(12) {
+            left: 23px;
+            top: 13px;
+            height: 17px;
+            width: 10px;
+            transform: rotate(55deg);
+        }
+
+        .water-big span:nth-child(13) {
+            left: 62px;
+            top: 14px;
+            height: 15px;
+            width: 10px;
+            transform: rotate(55deg);
+        }
+
+        .water-big span:nth-child(14) {
+            left: 100px;
+            top: 14px;
+            height: 15px;
+            width: 10px;
+            transform: rotate(55deg);
+        }
+
+        .ship-wrapper {
+            position: absolute;
+            left: 260px;
+            bottom: 116px;
+            display: block;
+            z-index: 4;
+        }
+
+        .ship {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            z-index: 6;
+            width: 86px;
+            height: 34px;
+            transform-origin: center center;
+            animation: shipFloat 1.6s linear infinite;
+        }
+
+        @keyframes shipFloat {
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+
+            25% {
+                transform: translateY(0) rotate(-10deg);
+            }
+
+            40% {
+                transform: translateY(4px) rotate(-10deg);
+            }
+
+            85% {
+                transform: translateY(1px) rotate(10deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(0);
+            }
+        }
+
+        .ship span {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 86px;
+            height: 34px;
+            border: 3px solid #030308;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 20px;
+            background-color: #fff;
+            z-index: 1;
+        }
+
+        .ship span:nth-child(2) {
+            left: 30px;
+            bottom: 34px;
+            width: 3px;
+            height: 85px;
+            border: none;
+            border-radius: 0;
+            background-color: #030308;
+        }
+
+        .ship span:nth-child(3) {
+            left: 21px;
+            bottom: 57px;
+            width: 0;
+            height: 0;
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+            border-bottom: 62px solid #030308;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            transform: rotate(-16.5deg);
+            border-bottom-right-radius: 5px;
+        }
+
+        .ship span:nth-child(4) {
+            left: 21px;
+            bottom: 55px;
+            width: 0;
+            height: 0;
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+            border-bottom: 62px solid #fff;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            transform: rotate(-17.5deg) scale(0.85);
+            border-bottom-right-radius: 3px;
+            z-index: 2;
+        }
+
+        .ship span:nth-child(5) {
+            left: -1px;
+            bottom: 60px;
+            width: 0;
+            height: 0;
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+            border-bottom: 48px solid #030308;
+            border-left: 31px solid transparent;
+            border-right: 0 solid transparent;
+            border-bottom-left-radius: 5px;
+        }
+
+        .ship span:nth-child(6) {
+            left: 1px;
+            bottom: 58px;
+            width: 0;
+            height: 0;
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+            border-bottom: 48px solid #fff;
+            border-left: 31px solid transparent;
+            border-right: 0 solid transparent;
+            border-bottom-left-radius: 3px;
+            transform: scale(0.80);
+            z-index: 2;
+        }
+
+        .animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        .animasi {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .animasi.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="navbar">
+        <div class="navbar">
+            <nav class="bg-white shadow shadow-color fixed w-full mt-0 md:mt-0 z-50">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
+                    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="ocean/logo.png" class="h-10" alt="Ocean Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+                    </a>
+                    <button data-collapse-toggle="navbar-default" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#333132] rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-blue-950"
+                        aria-controls="navbar-default" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                        <ul
+                            class="md:items-center  bg-[#374993] font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-9 rtl:space-x-reverse md:mt-0 md:bg-white">
+                            <li>
+                                <a href="artikel.html"
+                                    class="block py-3 hover:border-s-4 md:border-none  hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-0 md:text-[#333132]">Artikel</a>
+                            </li>
+                            <li>
+                                <a href="hewanlaut.html"
+                                    class="block py-3 hover:border-s-4 md:border-none  hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:text-[#333132]">Hewan
+                                    Laut</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-3 hover:border-s-4 md:border-none  hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:text-[#333132]">Jenis
+                                    Sampah
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-3 hover:border-s-4 md:border-none  hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:text-[#333132]">Layanan</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-3 hover:border-s-4 md:border-none  hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:text-[#333132]">Galeri</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-2 md:mt-0 mt-3 px-3 h-10 w-16 md:flex justify-center items-center text-[]  border md:border-none text-white biru-gitu rounded-full">Tips</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+    <section id="animasi" class="animate">
+        <section id="judul">
+            <div class="area pt-24 flex flex-col justify-center items-center">
+                <div class="text w-[85%] md:w-[40%] flex flex-col justify-center items-center">
+                    <p style="font-family: 'Plus Jakarta Sans';"
+                        class=" text-[25px]  md:text-[49.52px] font-semibold text-center text-[#333132]">Kenali Hewan -
+                        Hewan Laut Yang Unik - Unik Dan Dijaga Agar Tidak Punah</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="alert">
+            <div class="area w-full flex justify-center items-center pt-14">
+                <div class="content w-[85%] flex justify-center items-center scale-105">
+                    <div
+                        class="penting flex justify-center items-center border rounded-[15px] px-8 py-3 hover:bg-[#F6F6F6] hover:rotate-6 hover: duration-200">
+                        <div
+                            class="seru bg-[#374993] text-[10px] md:text-[15px] md:py-0.5 py-1 px-3 md:px-3 text-white rounded-full">
+                            !</div>
+                        <p class="text-[#374993] text-[12px] md:text-[15px] pl-3 ">Spesies laut yang terancam punah</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="desk">
+            <div class="area w-full flex justify-center items-center pt-10 md:pt-20">
+                <div class="content w-[85%] flex justify-center items-center">
+                    <div
+                        class=" md:w-[85%] flex flex-col justify-center items-center card bg-[#374993] p-5 md:p-16 rounded-[15px] md:rounded-[30.42px] text-white">
+                        <div class="row-atas">
+                            <p class="md:text-[31px] font-light">Keanekaragaman hayati laut Indonesia khususnya sejumlah
+                                spesies laut terindikasi semakin hari
+                                semakin terancam. Buktinya, Kementerian Kelautan dan Perikanan (KKP) Republik Indonesia
+                                sampai menjalankan program Rencana Aksi Nasional (RAN) untuk Konservasi Keanekaragaman
+                                Hayati Laut 2015-2019.</p>
+                        </div>
+                        <div class="row-bawah pt-5 md:pt-14 flex md:flex-row flex-col gap-6 md:gap-10">
+                            <div class="kanan md:w-[50%] md:pb-0 ">
+                                <p class="font-extralight md:text-[22.52px]">Program ran 2015-2019 memiliki target
+                                    nasional
+                                    untuk mempertahankan
+                                    populasi spesies yang terancam punah sebagai spesies prioritas konservasi nasional.
+                                </p>
+                            </div>
+                            <div class="kiri md:w-[50%]">
+                                <p class="font-extralight md:text-[22.52px]">Salah satu upaya adalah konservasi jenis
+                                    ikan
+                                    yang terancam punah,
+                                    langka, dan yang reproduksinya rendah melalui mekanisme perlindungan dan pelestarian
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="hewan">
+            <div class="area w-full flex justify-center items-center pt-14 md:pt-28  md:pb-20">
+                <div class="content w-[85%] flex flex-col justify-center items-center">
+                    <div class="judul ">
+                        <p class="text-[#333132] text-[30px] md:text-[54.7px] font-semibold">Hewan Prioritas</p>
+                    </div>
+                    <div class="jenis w-[85%] grid grid-cols-2 md:grid-cols-4 gap-14 md:gap-20 pt-14 pb-20">
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/teripang.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Teripang</p>
+                        </div>
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/kuda.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Kuda Laut</p>
+                        </div>
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/hiu.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Hiu</p>
+                        </div>
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/pari.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Pari</p>
+                        </div>
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/kima.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Kima</p>
+                        </div>
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/Sidat.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Sidat</p>
+                        </div>
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/Napoleon.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Napoleon</p>
+                        </div>
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/catacea.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Catacea</p>
+                        </div>
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/bambulaut.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Bambu Laut</p>
+                        </div>
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/penyu.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Penyu</p>
+                        </div>
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/parimanta.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Pari Manta</p>
+                        </div>
+                        <div class="card animasi flex flex-col justify-center items-center">
+                            <img src="ocean/lola.png" class="" alt="">
+                            <p class="font-medium md:text-[40px] text-center pt-5">Lola</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="animate" class=" md:scale-[1]">
+            <div class="area w-full flex justify-center items-center  pb-20">
+                <div class="content w-[85%]  flex flex-col justify-center items-center">
+                    <div
+                        class="card  w-[95%] md:w-[85%] md:h-[1150px] bg-[#374993] relative flex flex-col justify-start items-center border rounded-[29px] overflow-hidden">
+                        <div class="judul pb-5 pt-10">
+                            <div
+                                class="penting flex justify-center items-center  rounded-full px-5 py-3 bg-[#29345E]  duration-200">
+                                <div
+                                    class="seru bg-[#374993] text-[10px] md:text-[15px] md:py-0.5 py-1 px-3 md:px-3 text-white rounded-full">
+                                    !</div>
+                                <p class="text-white text-[12px]  md:text-[15px] pl-3 ">Penting
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-area pb-0 md:pb-52 ">
+                            <p class="text-white font-semibold text-[20px] md:text-[85px] text-center">Bersama kita jaga
+                                laut,<br> rumah bagi kehidupan.</p>
+                        </div>
+                        <div class=" section-center pt-53 md:pt-0  md:scale-[2.2]">
+                            <div class="section-up">
+                                <div class="sun">
+                                    <span></span>
+                                </div>
+                                <div class="cloud-left">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="cloud-middle">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="cloud-right">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="bird-wrapper">
+                                    <div class="left-wing">
+                                        <span></span>
+                                    </div>
+                                    <div class="right-wing">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="bird-wrapper snd">
+                                    <div class="left-wing">
+                                        <span></span>
+                                    </div>
+                                    <div class="right-wing">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="bird-wrapper trd">
+                                    <div class="left-wing">
+                                        <span></span>
+                                    </div>
+                                    <div class="right-wing">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="building-left">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="building-right">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span><span></span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="left-tree">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="right-tree">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="hill">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="hill snd">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="hill trd">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="hill frt">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="section-down">
+                                <div class="ship-wrapper">
+                                    <div class="ship">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="water-big-wrapper">
+                                    <div class="water-big-wrap">
+                                        <div class="water-big">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="water-big snd">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="water-big trd">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="water-lines-wrapper">
+                                    <div class="water-lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="water-lines-wrapper right">
+                                    <div class="water-lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="fish-wrapper">
+                                    <div class="fish-wrap">
+                                        <div class="fish">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fish-wrapper right">
+                                    <div class="fish-wrap">
+                                        <div class="fish">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="water-wrapper top">
+                                    <div class="water-wrap">
+                                        <div class="water">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="water snd">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="water trd">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="water-wrapper">
+                                    <div class="water-wrap">
+                                        <div class="water">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="water snd">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="water trd">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="water-wrapper top right">
+                                    <div class="water-wrap">
+                                        <div class="water">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="water snd">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="water trd">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="water-wrapper right">
+                                    <div class="water-wrap">
+                                        <div class="water">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="water snd">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="water trd">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var element = document.getElementById('animasi');
+            element.classList.add('show');
+        });
+
+        // Fungsi untuk memeriksa apakah elemen masuk viewport
+        function isInViewport(element) {
+            var rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Fungsi untuk menampilkan animasi saat elemen masuk viewport
+        function showOnScroll() {
+            var cards = document.querySelectorAll('.card');
+            cards.forEach(function (card) {
+                if (isInViewport(card)) {
+                    card.classList.add('show');
+                }
+            });
+        }
+
+        // Event listener untuk mendeteksi scroll
+        window.addEventListener('scroll', showOnScroll);
+
+        // Panggil fungsi showOnScroll() sekali saat halaman dimuat, untuk menunjukkan elemen yang sudah terlihat saat pertama kali
+        showOnScroll();
+    </script>
+</body>
+
+</html>

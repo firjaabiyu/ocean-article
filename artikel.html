@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            overflow-x: hidden;
+        }
+
+        .biru-gitu {
+            background-color: #374993;
+        }
+
+        .warna-text {
+            color: #333132;
+        }
+
+        .text-hover {
+            color: #374993;
+        }
+
+        .shadow-color {
+            box-shadow: #37499371;
+        }
+
+        .animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="navbar">
+        <div class="navbar">
+            <nav class="bg-white shadow shadow-color fixed w-full mt-0 md:mt-0 z-50">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
+                    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="ocean/logo.png" class="h-10" alt="Ocean Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+                    </a>
+                    <button data-collapse-toggle="navbar-default" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#333132] rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-blue-950"
+                        aria-controls="navbar-default" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                        <ul
+                            class="md:items-center  bg-[#374993] font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-9 rtl:space-x-reverse md:mt-0 md:bg-white">
+                            <li>
+                                <a href="artikel.html"
+                                    class="block py-3 hover:border-s-4 md:border-none  hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-0 md:text-[#333132]">Artikel</a>
+                            </li>
+                            <li>
+                                <a href="hewanlaut.html"
+                                    class="block py-3 hover:border-s-4 md:border-none  hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:text-[#333132]">Hewan
+                                    Laut</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-3 hover:border-s-4 md:border-none  hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:text-[#333132]">Jenis
+                                    Sampah</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-3 hover:border-s-4 md:border-none  hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:text-[#333132]">Layanan</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-3 hover:border-s-4 md:border-none  hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:text-[#333132]">Galeri</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-2 md:mt-0 mt-3 px-3 h-10 w-16 md:flex justify-center items-center text-[]  border md:border-none text-white biru-gitu rounded-full">Tips</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section id="animasi" class="animate">
+        <section id="judul">
+            <div class="area pt-24 flex flex-col justify-center items-center">
+                <div class="text  md:w-[40%] flex flex-col justify-center items-center">
+                    <p style="font-family: 'Plus Jakarta Sans';"
+                        class=" text-[27px]  md:text-[49.52px] font-semibold text-center text-[#374993]">Baca Artikel
+                        Tentang <br> Kelautan
+                        Indonesia <br>Yang Sudah</p>
+                    <p class="font-[NewsReader] italic text-[25px] md:text-[48.31px] text-center mt-3 text-[#374993]">
+                        Terverifikasi Oleh
+                        Pemerintahan. </p>
+                </div>
+
+            </div>
+        </section>
+        <hr class="text-[#B8B8B8] mt-8">
+
+        <section id="artikel">
+            <div class="area w-full flex flex-col justify-center items-center pt-10 md:pt-24 pb-10 md:pb-24">
+                <div
+                    class="content w-[85%]  justify-between items-center grid md:grid-cols-2 grid-cols-1 gap-14 md:gap-24">
+                    <div class="card flex flex-col hover:underline hover:cursor-pointer ">
+                        <div class="row-atas flex justify-center items-center">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">1</p>
+                                </div>
+                            </div>
+                            <div class="judul ml-3 md:text-[25px]">Selamatkan Laut dari Sampah Plastik</div>
+                            <div class="icon ml-3 text-[30px] rotate-45">
+                                <ion-icon name="arrow-up-outline"></ion-icon>
+                                </ion-icon>
+                            </div>
+                        </div>
+                        <div class="row-bawah pt-5 pl-[65px] md:pl-[150px]">
+                            <div class="gambar">
+                                <img src="ocean/selamatkan.png" class="md:w-[250px] w-[150px]" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col hover:underline hover:cursor-pointer">
+                        <div class="row-atas flex justify-center items-center">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">2</p>
+                                </div>
+                            </div>
+                            <div class="judul ml-3 md:text-[25px]">Penyebab Laut Kotor Indonesia</div>
+                            <div class="icon ml-3 text-[30px] rotate-45">
+                                <ion-icon name="arrow-up-outline"></ion-icon>
+                                </ion-icon>
+                            </div>
+                        </div>
+                        <div class="row-bawah pt-5 pl-[65px] md:pl-[150px]">
+                            <div class="gambar">
+                                <img src="ocean/pandawarung.png" class="md:w-[250px] w-[150px]" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col hover:underline hover:cursor-pointer">
+                        <div class="row-atas flex justify-center items-center">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">3</p>
+                                </div>
+                            </div>
+                            <div class="judul ml-3 md:text-[25px]">Ada Berapa Banyak Sampah di laut ?</div>
+                            <div class="icon ml-3 text-[30px] rotate-45">
+                                <ion-icon name="arrow-up-outline"></ion-icon>
+                                </ion-icon>
+                            </div>
+                        </div>
+                        <div class="row-bawah pt-5 pl-[65px] md:pl-[150px]">
+                            <div class="gambar">
+                                <img src="ocean/laut-kotor.png" class=" w-[150px] md:w-[250px] " alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col hover:underline hover:cursor-pointer">
+                        <div class="row-atas flex justify-center items-center">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">4</p>
+                                </div>
+                            </div>
+                            <div class="judul ml-3 md:text-[25px]">Sampah Plastik Masalah serius!</div>
+                            <div class="icon ml-3 text-[30px] rotate-45">
+                                <ion-icon name="arrow-up-outline"></ion-icon>
+                                </ion-icon>
+                            </div>
+                        </div>
+                        <div class="row-bawah pt-5 pl-[65px] md:pl-[150px]">
+                            <div class="gambar">
+                                <img src="ocean/kotor-lagi.png" class="w-[150px] md:w-[250px]" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col hover:underline hover:cursor-pointer">
+                        <div class="row-atas flex justify-center items-center">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">5</p>
+                                </div>
+                            </div>
+                            <div class="judul ml-3 md:text-[25px]">Plastik Mengancam dan Berbahaya</div>
+                            <div class="icon ml-3 text-[30px] rotate-45">
+                                <ion-icon name="arrow-up-outline"></ion-icon>
+                                </ion-icon>
+                            </div>
+                        </div>
+                        <div class="row-bawah pt-5 pl-[65px] md:pl-[150px]">
+                            <div class="gambar">
+                                <img src="ocean/kesihan.png" class="w-[150px] md:w-[250px]" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col hover:underline hover:cursor-pointer">
+                        <div class="row-atas flex justify-center items-center">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">6</p>
+                                </div>
+                            </div>
+                            <div class="judul ml-3 md:text-[25px]">Bagaimana Laut Menjadi Kotor</div>
+                            <div class="icon ml-3 text-[30px] rotate-45">
+                                <ion-icon name="arrow-up-outline"></ion-icon>
+                                </ion-icon>
+                            </div>
+                        </div>
+                        <div class="row-bawah pt-5 pl-[65px] md:pl-[150px]">
+                            <div class="gambar">
+                                <img src="ocean/bagaimana.png" class="w-[150px] md:w-[250px]" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <hr class="text-[#B8B8B8] mb-8">
+
+        <section id="peringkat">
+            <div class="area w-full flex justify-center items-center pb-20">
+                <div class="content w-[75%] flex flex-col ">
+                    <div class="judul flex md:flex-row flex-col justify-between pb-14 ">
+                        <div class="kiri ">
+                            <p class="font-semibold text-[25px] md:text-[44.91px] text-[#374993]">10 Negara Dunia <br>
+                                Teratas Penyumbang</p>
+                            <p
+                                class="text-[#374993] font-[BodoniModa] italic font-semibold text-[25px] md:text-[44.91px]">
+                                Sampah Plastik ke Laut.</p>
+                        </div>
+                        <div class="kanan flex justify-start pt-3 md:pt-0 items-end">
+                            <p class="text-[#999999] text-[10px] md:text-[15px]">*Data 2021 by Indonesiabaik.id</p>
+                        </div>
+                    </div>
+                    <div class="peringkat grid md:grid-cols-3 gap-10">
+                        <div
+                            class="card bg-[#FAFAFA] hover:bg-[#ECECEC] duration-200 border rounded-[37.74px] flex flex-col justify-center items-center py-20">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">1</p>
+                                </div>
+                            </div>
+                            <div class="text flex flex-col justify-center items-center pt-5">
+                                <p class="font-medium text-[39.45px]">Filipina</p>
+                                <p class="font-medium text-[39.45px]">356.371 ton</p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-[#FAFAFA] hover:bg-[#ECECEC] border rounded-[37.74px] flex flex-col justify-center items-center py-20">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">2</p>
+                                </div>
+                            </div>
+                            <div class="text flex flex-col justify-center items-center pt-5">
+                                <p class="font-medium text-[39.45px]">India</p>
+                                <p class="font-medium text-[39.45px]">126.513 ton</p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-[#FAFAFA] hover:bg-[#ECECEC] border rounded-[37.74px] flex flex-col justify-center items-center py-20">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">3</p>
+                                </div>
+                            </div>
+                            <div class="text flex flex-col justify-center items-center pt-5">
+                                <p class="font-medium text-[39.45px]">Malaysia</p>
+                                <p class="font-medium text-[39.45px]">73.098 ton</p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-[#FAFAFA] hover:bg-[#ECECEC] border rounded-[37.74px] flex flex-col justify-center items-center py-20">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">4</p>
+                                </div>
+                            </div>
+                            <div class="text flex flex-col justify-center items-center pt-5">
+                                <p class="font-medium text-[39.45px]">China</p>
+                                <p class="font-medium text-[39.45px]">70.707 ton</p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-[#FAFAFA] hover:bg-[#ECECEC] border rounded-[37.74px] flex flex-col justify-center items-center py-20">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">5</p>
+                                </div>
+                            </div>
+                            <div class="text flex flex-col justify-center items-center pt-5">
+                                <p class="font-medium text-[39.45px]">Indonesia</p>
+                                <p class="font-medium text-[39.45px]">56.333 ton</p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-[#FAFAFA] hover:bg-[#ECECEC] border rounded-[37.74px] flex flex-col justify-center items-center py-20">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">6</p>
+                                </div>
+                            </div>
+                            <div class="text flex flex-col justify-center items-center pt-5">
+                                <p class="font-medium text-[39.45px]">Brazil</p>
+                                <p class="font-medium text-[39.45px]">37,799 ton</p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-[#FAFAFA] hover:bg-[#ECECEC] border rounded-[37.74px] flex flex-col justify-center items-center py-20">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">7</p>
+                                </div>
+                            </div>
+                            <div class="text flex flex-col justify-center items-center pt-5">
+                                <p class="font-medium text-[39.45px]">Vietnam</p>
+                                <p class="font-medium text-[39.45px]">28.221 ton</p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-[#FAFAFA] hover:bg-[#ECECEC] border rounded-[37.74px] flex flex-col justify-center items-center py-20">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">8</p>
+                                </div>
+                            </div>
+                            <div class="text flex flex-col justify-center items-center pt-5">
+                                <p class="font-medium text-[39.45px]">Bangladesh</p>
+                                <p class="font-medium text-[39.45px]">24.640 ton</p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-[#FAFAFA] hover:bg-[#ECECEC] border rounded-[37.74px] flex flex-col justify-center items-center py-20">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">9</p>
+                                </div>
+                            </div>
+                            <div class="text flex flex-col justify-center items-center pt-5">
+                                <p class="font-medium text-[39.45px]">Thailand</p>
+                                <p class="font-medium text-[39.45px]">22.806 ton</p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-[#FAFAFA] hover:bg-[#ECECEC] border rounded-[37.74px] flex flex-col justify-center items-center py-20">
+                            <div class="angka bg-[#A3ABCD] px-2 py-2 rounded-[8.44px]">
+                                <div class="bulat bg-[#374993] px-4 py-2 rounded-full">
+                                    <p style="font-family: 'Plus Jakarta Sans';" class="text-white">10</p>
+                                </div>
+                            </div>
+                            <div class="text flex flex-col justify-center items-center pt-5">
+                                <p class="font-medium text-[39.45px]">Nigeria</p>
+                                <p class="font-medium text-[39.45px]">18.640 ton</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var element = document.getElementById('animasi');
+            element.classList.add('show');
+        });
+    </script>
+</body>
+
+</html>

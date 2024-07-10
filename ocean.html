@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/ba2edaa873.js" crossorigin="anonymous"></script>
+    <title>Lomba Laut</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .biru-gitu {
+            background-color: #374993;
+        }
+
+        .bg-ocean {
+            background-color: #29345E;
+        }
+
+        .warna-text {
+            color: #333132;
+        }
+
+        .text-hover {
+            color: #374993;
+        }
+
+        .shadow-color {
+            box-shadow: #37499371;
+        }
+
+        .border-number {
+            border-color: #A3ABCD;
+        }
+        .animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .animasi {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .animasi.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body >
+    <section class="w-full flex items-center justify-center md:py-4 py-3 biru-gitu fixed z-50 ">
+        <p class="text-white text-xs md:text-base">Baca atikel tentang cara menjaga lingkungan laut di <span
+                class="cursor-pointer ml-1 md:ml-4 font-medium py-[6px] md:px-4 px-2 bg-none rounded-full bg-ocean">Ocean</span>
+        </p>
+    </section>
+
+
+    <nav class="bg-white shadow shadow-color fixed w-full mt-10 md:mt-[56px] z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
+            <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="ocean/logo-ocean.png" class="h-10" alt="Ocean Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm warna-text rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-blue-950"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="md:items-center biru-gitu font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-9 rtl:space-x-reverse md:mt-0 md:bg-white">
+                    <li>
+                        <a href="artikel.html"
+                            class="block py-3 hover:border-s-4 md:border-none md:text-black hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-0 md:warna-text">Artikel</a>
+                    </li>
+                    <li>
+                        <a href="hewanlaut.html"
+                            class="block py-3 hover:border-s-4 md:border-none md:text-black hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:warna-text">Hewan
+                            Laut</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-3 hover:border-s-4 md:border-none md:text-black hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:warna-text">Jenis
+                            Sampah</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-3 hover:border-s-4 md:border-none md:text-black hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:warna-text">Layanan</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-3 hover:border-s-4 md:border-none md:text-black hover:px-3 hover:bg-blue-950 duration-300 rounded md:hover:text-blue-950 text-white md:duration-500 md:hover:bg-transparent md:p-0 md:hover:px-0 md:py-0 md:hover:scale-90 md:mt-0 mt-2 md:warna-text">Galeri</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 md:mt-0 mt-3 px-3 h-10 w-16 md:flex justify-center items-center warna-text border md:border-none text-white biru-gitu rounded-full">Tips</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="animasi" class="animate flex justify-center ">
+        <div id="penengah" class="w-[85%] h-screen md:mt-44 mt-40">
+            <div class="flex  flex-col md:flex-row">
+                <div class="md:w-1/2  hidden md:order-1 md:flex justify-center items-center">
+                    <!-- Bagian Kiri -->
+                    <img src="ocean/judul-pantai.png" alt="Low Internet" id="elemen1"
+                        class="opacity-0 transform translate-y-10 transition-opacity duration-[1200ms] md:w-[23vw] md:py-16">
+                </div>
+                <div class="md:w-1/2 md:order-2 flex justify-start items-center">
+                    <!-- Bagian Kanan -->
+                    <div id="text-area" class="flex-row">
+                        <p id="elemen"
+                            class="opacity-0 duration-[1200ms] font-extrabold text-7xl md:text-8xl text-neutral-800"
+                            style="font-family: 'Bodoni Moda';">12,7
+                            Juta</p>
+                        <p id="elemenn"
+                            class="opacity-0 duration-[1800ms] font-bold text-[2rem] md:text-5xl mt-6 md:mr-20 mr-0 text-neutral-800 md:leading-[4rem] leading-[2.8rem] tracking-normal md:tracking-[0.012em]"
+                            style="font-family: 'Plus Jakarta Sans';">Ton Plastik Masuk Ke Laut <span
+                                class="text-hover ">Setiap Tahun</span>.</p>
+                    </div>
+                </div>
+            </div>
+            <section id="elemen2"
+                class="opacity-0  transform translate-y-10 transition-opacity duration-[1200ms] border rounded-xl md:rounded-3xl border-neutral-400 md:mt-0 mt-10">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/3 md:order-1 flex justify-start items-center md:justify-center md:items-center">
+                        <img src="ocean/logo-ocean.png" alt="Internet Low"
+                            class="md:my-20 md:mx-44 w-[30vw] md:w-[15vw] my-4 mx-6">
+                    </div>
+                    <div class="md:w-auto md:order-2 flex md:items-center items-start">
+                        <div id="text-area" class="flex-row">
+                            <p class="md:text-3xl text-base font-semibold md:leading-[2.8rem] ml-5 md:ml-0 text-neutral-800"
+                                style="font-family: 'Plus Jakarta Sans';">Sebagai warga
+                                masyarakat indonesia, kita punya tanggung jawab untuk menjaga alam negara.</p>
+                            <p class="mx-5 md:mx-0 mb-5 md:mb-0 mt-5 md:mt-7 text-sm md:text-xl ml-5 md:ml-0 font-medium text-neutral-500 md:pr-44"
+                                style="font-family: 'Plus Jakarta Sans';">Ocean menyediakan seputar berita, cara, dan
+                                tips yang dapat mengedukasi agar lebih sadar
+                                tentang batapa pentingnya kita untuk menjaga laut.</p>
+                                
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="md:mt-40  mt-16">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 md:order-1 flex justify-start items-center">
+                        <p class="text-center text-4xl md:text-5xl mr-0 md:mr-52 text-hover md:leading-[4rem]"
+                            style="font-family: 'Plus Jakarta Sans';">Penghasil <span
+                                style="font-family: 'Bodoni Moda'; font-style: italic;">Sampah Plastik Terbanyak</span>.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 md:order-2 flex md:justify-end justify-center items-center md:mt-0 mt-7">
+                        <p class="text-center text-lg md:text-xl text-neutral-800 md:text-right ml-0 md:ml-40"
+                            style="font-family: 'Plus Jakarta Sans';">Berikut
+                            lima negara yang menjadi penyumbang limbah plastik ke lautan di dunia, yaitu China, Amerika,
+                            India, Brazil, dan Indonesia.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="mt-10 md:mt-32  flex items-center justify-center">
+                <div id="bawahin-text" class="flex-row">
+                    <img class="mx-auto md:w-[80%] border border-neutral-400 md:rounded-[40px] rounded-xl shadow-xl"
+                        src="ocean/data-sampahhhh.png" alt="Internet Low">
+                    <p class="cursor-pointer mt-3 text-center md:mt-5 text-neutral-800 md:text-base font-medium text-[8px]  hover:text-blue-900"
+                        style="font-family: 'Plus Jakarta Sans';">
+                        https://indonesiabaik.id/infografis/indonesia-darurat-sampah-plastik-laut</p>
+                </div>
+            </section>
+            <section class="md:mt-40 mt-16 flex justify-center   items-center">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 md:order-1">
+                        <div id="mengukur" class="flex flex-col justify-center items-center md:items-end">
+                            <p class="text-4xl md:text-5xl font-semibold text-neutral-800"
+                                style="font-family: 'Plus Jakarta Sans';">3+ Cara Untuk</p>
+                            <p class="text-4xl md:text-5xl mt-5 font-semibold text-white biru-gitu w-auto md:w-[21rem] p-3"
+                                style="font-family: 'Plus Jakarta Sans';">Menjaga Laut</p>
+                        </div>
+                    </div>
+                    <div class="ml-10 md:w-1/2 md:order-2  items-center md:block hidden">
+                        <p class="leading-[2.5rem] w-[21em] text-2xl font-medium text-neutral-800"
+                            style="font-family: 'Plus Jakarta Sans';">
+                            Gunakan informasi yang disajikan website ini untuk menjaga laut dengan lebih bijak di
+                            indonesia.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="md:mt-20  mt-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4">
+                    <div
+                        class="overflow-hidden hover:bg-sky-50 duration-100 bg-gray-50 border-2 border-gray-300 flex-col rounded-2xl md:rounded-[2rem] flex justify-start">
+                        <div class="angka bg-[#A3ABCD] py-4 px-5 rounded-2xl mx-auto mt-7 ml-7">
+                            <div class="bulat bg-[#374993] px-6 py-3 rounded-full">
+                                <p style="font-family: 'Plus Jakarta Sans';" class="text-xl font-semibold text-white">1
+                                </p>
+                            </div>
+                        </div>
+                        <p class="mt-10 ml-7 font-medium text-xl md:pr-8 leading-[1.8rem] md:leading-[2.2rem]"
+                            style="font-family: 'Plus Jakarta Sans';">Tidak Sembarangan Memancing Hewan Laut.</p>
+                        <img class="transform-gpu duration-1000 mt-[1px] rounded-2xl md:rounded-[2rem]"
+                            src="ocean/ikan.png" alt="Image Not Loaded, Please Reload Tab">
+                    </div>
+                    <div
+                        class="overflow-hidden hover:bg-sky-50 duration-100 bg-gray-50 border-2 border-gray-300 flex-col rounded-2xl md:rounded-[2rem] flex justify-start">
+                        <div class="angka bg-[#A3ABCD] py-4 px-5 rounded-2xl mx-auto mt-7 ml-7">
+                            <div class="bulat bg-[#374993] px-6 py-3 rounded-full">
+                                <p style="font-family: 'Plus Jakarta Sans';" class="text-xl font-semibold text-white">2
+                                </p>
+                            </div>
+                        </div>
+                        <p class="mt-10 ml-7 font-medium text-xl md:pr-8 leading-[2.2rem]"
+                            style="font-family: 'Plus Jakarta Sans';">Tidak membuang sampah ke laut, Buanglah sampah di
+                            tempatnya.</p>
+                        <img class="transform-gpu duration-1000 mt-[5px] rounded-2xl md:rounded-[2rem]"
+                            src="ocean/sampah.png" alt="Image Not Loaded, Please Reload Tab">
+                    </div>
+                    <div
+                        class="overflow-hidden hover:bg-sky-50 duration-100 bg-gray-50 border-2 border-gray-300 flex-col rounded-2xl md:rounded-[2rem] flex justify-start">
+                        <div class="angka bg-[#A3ABCD] py-4 px-5 rounded-2xl mx-auto mt-7 ml-7">
+                            <div class="bulat bg-[#374993] px-6 py-3 rounded-full">
+                                <p style="font-family: 'Plus Jakarta Sans';" class="text-xl font-semibold text-white">3
+                                </p>
+                            </div>
+                        </div>
+                        <p class="mt-10 ml-7 font-medium text-xl md:pr-8 leading-[2.2rem]"
+                            style="font-family: 'Plus Jakarta Sans';">Menjaga kelestarian terumbu Karang dan melakukan
+                            reboisasi pantai dengan tanaman bakau.</p>
+                        <img class="transform-gpu duration-1000 mt-[140px] md:mt-[200px] rounded-2xl md:rounded-[2rem]"
+                            src="ocean/trumbu.png" alt="Image Not Loaded, Please Reload Tab">
+                        <img class="w-12 absolute md:top-[240%] top-[0%] left-[65%] md:left-[85%]" src="ocean/mtahari.png"
+                            alt="Load Tab">
+                    </div>
+                </div>
+            </section>
+            <section class="mt-32 ">
+                <div id="frame" class="w-full h-[30rem] md:h-[40rem] rounded-[40px] relative z-30">
+                    <div id="area-text" class="flex flex-col justify-center items-center">
+                        <p
+                            class="text-2xl md:text-5xl font-medium md:font-semibold tracking-normal md:tracking-[0.030rem] text-neutral-800 mt-0 md:mt-20">
+                            Kenali Hewan -
+                            Hewan Laut</p>
+                        <p class="text-lg md:text-2xl px-5 md:px-80 text-center mt-5 md:mt-7 font-light">Penting bagi
+                            kita mengetahui hewan laut
+                            untuk melindungi spesies yang hampir punah</p>
+                        <a href="hewanlaut.html"
+                            class="mt-10 md:mt-14 relative inline-flex items-center justify-center font-semibold p-4 px-6 py-3 overflow-hidden text-hover transition duration-300 ease-out border-2 border-[#374993] group">
+                            <span
+                                class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-y-full biru-gitu group-hover:translate-y-0 ease">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </span>
+                            <span
+                                class="absolute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-y-full ease"
+                                style="font-family: 'Plus Jakarta Sans';">Lebih Lanjut</span>
+                            <span class="relative invisible">Button Text</span>
+                        </a>
+                    </div>
+                </div>
+                <div id="posisi-ikan"
+                    class="border border-neutral-400 relative overflow-hidden w-full h-[30rem] md:h-[40rem] bottom-[33rem] md:bottom-[40rem] rounded-xl md:rounded-[40px]">
+                    <img class="absolute z-40 top-[75%] md:top-[70%] left-[22%] md:left-[38%] inset-0 w-[45vw] md:w-[20vw] object-cover"
+                        src="ocean/ikan-layar.png" alt="Image Ikan Layar">
+                    <img class="md:block hidden absolute z-40 top-[80%] left-[0%] inset-0 w-[10vw] object-cover"
+                        src="ocean/ikan-hiu.png" alt="Image Ikan Layar">
+                    <img class="md:block hidden absolute z-40 top-[74%] left-[90%] inset-0 w-[9vw] object-cover"
+                        src="ocean/kuda-laut.png" alt="Image Ikan Layar">
+                    <img class="md:block hidden absolute z-40 top-[0%] left-[0%] inset-0 w-[10vw] object-cover"
+                        src="ocean/ubur-2.png" alt="Image Ikan Layar">
+                    <img class="md:block hidden absolute z-40 top-[0%] left-[30%] inset-0 w-[12vw] object-cover"
+                        src="ocean/ikan-b.png" alt="Image Ikan Layar">
+                    <img class="md:block hidden absolute z-40 top-[0%] left-[80%] inset-0 w-[12vw] object-cover"
+                        src="ocean/kepiting.png" alt="Image Ikan Layar">
+                    <img class="absolute z-[35] top-[76%] md:top-[61%] md:left-[31%] left-12 inset-0 w-[60vw] md:w-[35vw] object-cover"
+                        src="ocean/hiasan-laut.png" alt="Image Ikan Layar">
+                </div>
+            </section>
+            <section class="relative top-[-30rem] md:top-[-33rem] ">
+                <div class="flex flex-col md:flex-row border border-gray-400 rounded-3xl biru-gitu ">
+                    <div class="md:w-[60%] md:order-1">
+                        <p class="text-3xl md:text-left text-center md:text-4xl font-semibold text-white md:mt-14 mt-10 md:ml-14 ml-0 pr-0 md:pr-20"
+                            style="font-family: 'Plus Jakarta Sans';">Kenali Jenis-Jenis Sampah <span
+                                class="text-xl font-normal md:block hidden"><br>penting untuk memahami jenis-jenis
+                                sampah agar kita
+                                semua sadar betapa berbahaya sampah di laut.</span></p>
+                        <a href="#"
+                            class="mt-10 ml-[30%] md:ml-14 mb-2 relative border inline-flex items-center justify-center bg-white font-semibold p-4 px-6 py-3 overflow-hidden text-hover transition duration-300 ease-out b2 group">
+                            <span
+                                class="absolute inset-0 biru-gitu text-white flex items-center justify-center w-full h-full duration-300 -translate-y-full biru-gitu group-hover:translate-y-0 ease">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </span>
+                            <span
+                                class="absolute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-y-full ease"
+                                style="font-family: 'Plus Jakarta Sans';">Pelajari</span>
+                            <span class="relative invisible">Button Text</span>
+                        </a>
+                    </div>
+                    <div class="md:w-[40%] flex items-end justify-end md:order-2">
+                        <picture>
+                            <img class="md:block hidden w-[35rem] rounded-[1.4rem]" src="ocean/sampah-dekstop.png"
+                                alt="Image Not Loaded, Please Reload">
+                            <img class="md:hidden block mt-28" src="ocean/sampah-responsive.png"
+                                alt="Image Not Loaded, Please Reload">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="relative top-[-27rem] ">
+                <div class="flex flex-col md:flex-row border border-gray-400 rounded-3xl">
+                    <div class="md:w-[40%] flex justify-center md:justify-start items-center md:order-1 order-last">
+                        <img class="md:block hidden md:w-[30rem] md:border-b md:border-t md:border-r border-gray-400 md:my-10 md:rounded-tr-xl md:rounded-br-xl"
+                            src="ocean/image-artikel.png" alt="Please Reload The Tab">
+                        <img class="md:hidden block mt-10 rounded-tl-xl rounded-tr-xl   w-[17rem] border-t border-l border-r border-gray-400"
+                            src="ocean/imageeee-artikel.png" alt="Please Reload The Tab">
+                    </div>
+                    <div
+                        class="md:w-[60%] md:order-2 order-first flex flex-col justify-center items-center md:items-start">
+                        <p class="md:mt-0 mt-10 text-neutral-800 text-xl md:text-4xl md:text-left text-center font-medium md:font-extrabold"
+                            style="font-family: 'Plus Jakarta Sans';">
+                            Baca - Baca Artikel Yang Sudah Terverifikasi Pemerintah <span
+                                class="text-xl font-normal md:block hidden leading-[1.9rem]"><br>Ocean menyediakan
+                                artikel - artikel yang relevan dan
+                                sudah terverifikasi oleh pemerintah untuk meng-edukasi audience agar lebih cermat dalam
+                                membuang sampah.</span></p>
+                        <p class="md:hidden block text-center text-sm mx-10 mt-5"
+                            style="font-family: 'Plus Jakarta Sans';">Ocean menyediakan artikel - artikel yang relevan
+                            dan sudah terverifikasi oleh pemerintah untuk meng-edukasi audience agar lebih cermat dalam
+                            membuang sampah.</p>
+                        <a href="artikel.html"
+                            class="mt-10 relative inline-flex items-center justify-center font-semibold p-4 px-6 py-3 overflow-hidden text-hover transition duration-300 ease-out border-2 border-[#374993] group">
+                            <span
+                                class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-y-full biru-gitu group-hover:translate-y-0 ease">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </span>
+                            <span
+                                class="absolute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-y-full ease"
+                                style="font-family: 'Plus Jakarta Sans';">Baca Artikel</span>
+                            <span class="relative invisible">Button Text</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="relative top-[-22rem] ">
+                <div id="menengahkan" class="flex flex-col justify-center items-center">
+                    <p class="text-2xl md:text-3xl text-center font-semibold text-neutral-800"
+                        style="font-family: 'Plus Jakarta Sans';">Jadi
+                        bagian dari orang yang sadar akan <span class="text-hover hover:underline">Lingkungannya</span>
+                    </p>
+                    <div class="border biru-gitu mt-10 flex flex-col justify-center items-center rounded-3xl">
+                        <div
+                            class="mt-10 penting flex justify-center items-center  rounded-full px-5 py-3 bg-[#29345E]  duration-200">
+                            <div
+                                class="seru bg-[#374993] text-[10px] md:text-[15px] md:py-0.5 py-1 px-3 md:px-3 text-white rounded-full">
+                                !</div>
+                            <p class="text-white text-[12px]  md:text-[15px] pl-3 ">Penting
+                            </p>
+                        </div>
+                        <p
+                            class="text-white text-2xl md:text-7xl text-center py-10 px-5 md:px-32 font-bold leading-[1.2em] tracking-[0.05rem]">
+                            Jangan Lupa Membuang Sampah Pada Tempatnya Agar Lingkunganmu Bersih</p>
+                        <img class="rounded-[1.6rem]" src="ocean/lingkuan-ber.png" alt="Please Reaload Tab">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <footer class="bg-white border-t border-gray-400 relative top-[295rem] md:top-[320rem]  "> 
+        <div class="w-full max-w-screen-xl mx-auto p-6 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between md:gap-0 gap-5">
+                <a href="" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="ocean/logo-ocean.png" class="h-11" alt="Ocean™ Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap"></span>
+                </a>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium warna-text sm:mb-0">
+                    <li>
+                        <a href="artikel.html" class="hover:underline me-4 md:me-6">Baca Artikel</a>
+                    </li>
+                    <li>
+                        <a href="hewanlaut.html" class="hover:underline me-4 md:me-6">Hewan Laut</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Sosial Media</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-400 sm:mx-auto lg:my-8" />
+            <span class="block text-sm text-neutral-800 sm:text-center">© 2023 <a
+                    href="" class="hover:underline">Ocean™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+   
+
+
+    <script>
+         function isInViewport(element) {
+            var rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function showOnScroll() {
+            var cards = document.querySelectorAll('.scroll');
+            cards.forEach(function (card) {
+                if (isInViewport(card)) {
+                    card.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', showOnScroll);
+
+        showOnScroll();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var element = document.getElementById('animasi');
+            element.classList.add('show');
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("elemen1").classList.remove("opacity-0", "translate-y-10");
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("elemen2").classList.remove("opacity-0", "translate-y-10");
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("elemen").classList.remove("opacity-0");
+            document.getElementById("elemen").classList.add("animate-fadeIn");
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("elemenn").classList.remove("opacity-0");
+            document.getElementById("elemenn").classList.add("animate-fadeIn");
+        });
+    </script>
+</body>
+
+</html>
